@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "325208670237",
+    "firebase_url": "https://sgt-client-default-rtdb.firebaseio.com",
+    "project_id": "sgt-client",
+    "storage_bucket": "sgt-client.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325208670237:android:bfc9e64c04930415b5c6f4",
+        "android_client_info": {
+          "package_name": "com.example.dispensadorfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325208670237-d943otub549u737558k6otnu6c7qvn6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv3Q8dVm8KoZqNc4c8ADKt3P1VnOoO2GI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325208670237-d943otub549u737558k6otnu6c7qvn6h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
