@@ -48,6 +48,7 @@ import com.example.dispensadorfirebase.clase.Usuario;
 import com.example.dispensadorfirebase.inicio.InicioOpcionDispositivo;
 import com.example.dispensadorfirebase.inicio.InicioOpcionLocal;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
@@ -96,9 +97,9 @@ public class InicioSesion extends AppCompatActivity {
 
               if (correo.length()>0 && pass.length()>0){
 
-                  btnconfirmar.setEnabled(false);
-                  setProgressDialog();
-                  validarUsuario(correo,pass);
+                      btnconfirmar.setEnabled(false);
+                      setProgressDialog();
+                      validarUsuario(correo,pass);
 
               }else{
 
@@ -167,6 +168,15 @@ public class InicioSesion extends AppCompatActivity {
     private void validarUsuario(String correo,String pass) {
 
             mAuth.signInWithEmailAndPassword(correo, pass)
+                    .addOnFailureListener(InicioSesion.this, new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(InicioSesion.this,"Hubo un error",Toast.LENGTH_SHORT).show();
+                            btnconfirmar.setEnabled(true);
+
+                            Log.e("Error",e.toString());
+                        }
+                    })
                     .addOnCompleteListener(InicioSesion.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -212,7 +222,7 @@ public class InicioSesion extends AppCompatActivity {
 
                             }
                         }
-                    });
+                        });
     }
 
 

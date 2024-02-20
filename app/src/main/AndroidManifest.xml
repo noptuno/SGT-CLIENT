@@ -32,6 +32,13 @@
         <activity
             android:name=".aplicaciones.supervisor.InicioSesion"
             android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
         </activity>
 
 
@@ -48,13 +55,10 @@
             android:label="Sistema Gestion de Turno"
             android:screenOrientation="portrait">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
+
         <activity
             android:name=".aplicaciones.supervisor.Supervisor_Flash"
             android:exported="true"
